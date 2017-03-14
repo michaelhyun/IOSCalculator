@@ -16,6 +16,7 @@ enum Optional<T>{
 class CalculatorBrain{
     
     private var accumulator = 0.0
+    private var internalProgram = [AnyObject()]
     private var clearedOnceAlready = false;
     
     func setOperand(operand:Double){

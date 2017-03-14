@@ -9,7 +9,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculatorController: UIViewController {
     
     @IBOutlet weak var operationMemory: UILabel!
     @IBOutlet private weak var display: UILabel!
