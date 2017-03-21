@@ -28,6 +28,46 @@ class CalculatorController: UIViewController {
         }
         }
     }
+    
+
+    @IBAction func storeVariable(_ sender: UIButton) {
+        brain.variableValues[sender.currentTitle!] = displayValue
+        if userIsInTheMiddleOfTyping {
+            userIsInTheMiddleOfTyping = false
+        } else {
+            brain.undo()
+        }
+        brain.program = brain.program
+
+        displayValue = brain.result
+
+    }
+    @IBAction func getVariable(_ sender: UIButton) {
+        brain.setOperand(variableName: sender.currentTitle!)
+        userIsInTheMiddleOfTyping = false
+        displayValue = brain.result
+
+    }
+
+    
+    @IBAction func undo(_ sender: UIButton) {
+        if userIsInTheMiddleOfTyping != true {
+            brain.undo()
+            return
+        }
+        
+        guard var number = display.text else {
+            return
+        }
+        
+        number.remove(at: number.index(before: number.endIndex))
+        if number.isEmpty {
+            number = "0"
+            userIsInTheMiddleOfTyping = false
+        }
+        display.text = number
+    }
+    
     @IBAction private func touchDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
         let currentMemory = operationMemory!.text!
