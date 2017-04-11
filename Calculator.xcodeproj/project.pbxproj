@@ -13,6 +13,7 @@
 		C30BD4251E5FC22600FD72E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C30BD4241E5FC22600FD72E4 /* Assets.xcassets */; };
 		C30BD4281E5FC22600FD72E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30BD4261E5FC22600FD72E4 /* LaunchScreen.storyboard */; };
 		C30BD4301E5FC25D00FD72E4 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30BD42F1E5FC25D00FD72E4 /* CalculatorBrain.swift */; };
+		C3D356351E9CBE1E00E443EC /* GraphingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D356341E9CBE1E00E443EC /* GraphingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C30BD4271E5FC22600FD72E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C30BD4291E5FC22600FD72E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C30BD42F1E5FC25D00FD72E4 /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
+		C3D356341E9CBE1E00E443EC /* GraphingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				C30BD42F1E5FC25D00FD72E4 /* CalculatorBrain.swift */,
 				C30BD4211E5FC22600FD72E4 /* Main.storyboard */,
 				C30BD4241E5FC22600FD72E4 /* Assets.xcassets */,
+				C3D356341E9CBE1E00E443EC /* GraphingViewController.swift */,
 				C30BD4261E5FC22600FD72E4 /* LaunchScreen.storyboard */,
 				C30BD4291E5FC22600FD72E4 /* Info.plist */,
 			);
@@ -141,6 +144,7 @@
 			files = (
 				C30BD4301E5FC25D00FD72E4 /* CalculatorBrain.swift in Sources */,
 				C30BD4201E5FC22600FD72E4 /* CalculatorController.swift in Sources */,
+				C3D356351E9CBE1E00E443EC /* GraphingViewController.swift in Sources */,
 				C30BD41E1E5FC22600FD72E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

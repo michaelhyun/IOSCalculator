@@ -9,7 +9,7 @@
 
 import UIKit
 
-class CalculatorController: UIViewController {
+class CalculatorViewController: UIViewController {
     
     @IBOutlet weak var operationMemory: UILabel!
     @IBOutlet private weak var display: UILabel!
@@ -34,11 +34,11 @@ class CalculatorController: UIViewController {
         brain.variableValues[sender.currentTitle!] = displayValue
         if userIsInTheMiddleOfTyping {
             userIsInTheMiddleOfTyping = false
-        } else {
-            brain.undo()
         }
+//            else {
+//            brain.undo()
+//        }
         brain.program = brain.program
-
         displayValue = brain.result
 
     }
@@ -108,6 +108,8 @@ class CalculatorController: UIViewController {
         displayValue = brain.result
     }
     
+    
+    
     @IBAction private func performOperation(_ sender: UIButton) {
         decimalAlreadyPressed = false
         let currentMemory = operationMemory!.text!
@@ -123,4 +125,22 @@ class CalculatorController: UIViewController {
         }
         displayValue = brain.result
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var destination: UIViewController? = segue.destination
+        
+        if let navCon = destination as? UINavigationController {
+            destination = navCon.visibleViewController
+        }
+//        if let gvc = destination as? GraphingViewController {
+//            gvc.program = brain.program
+//            if let graphLabel = brain.description.last {
+//                gvc.graphLabel = graphLabel
+//            }
+//        }
+    }
+    
+    
+    
+    
 }
